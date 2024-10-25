@@ -1,0 +1,96 @@
+:root {
+  --main-bg-color: #000292;
+  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light dark;
+  font-family: 'Space Mono', monospace; /* Apply Space Mono */
+  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #f8f8f8;
+    color: #181818;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #f8f8f8;
+}
+
+
+a{
+  color: #f8f8f8;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body{
+  background-color: var(--main-bg-color);
+  color: #f8f8f8;
+  font-size: 0.8rem;
+}
+
+
+.content-wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  body{
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  body{
+    font-size: 1rem;
+  }
+  a{
+    font-size: 1.2rem;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body{
+    font-size: 0.9rem;
+  }
+  a{
+    font-size: 1.1rem;
+  }
+}
+
+

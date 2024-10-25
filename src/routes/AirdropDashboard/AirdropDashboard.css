@@ -1,0 +1,444 @@
+
+html, body {
+  overflow-y: hidden;
+  overflow-x: hidden; /* Deaktiviert das Scrollen */
+  width: 100%;
+  height: 100%; /* Stellt sicher, dass die Höhe 100% beträgt */
+}
+
+.airdrop-dashboard {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.airdrop-content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  position: relative;
+  transition: all 0.3s ease;
+
+  overflow-y: hidden; 
+  overflow-x: hidden;
+}
+
+.dashboard-wrapper {
+  width: 100%;
+  position: absolute;
+  border-left: 2px solid white;
+  overflow-y: auto;
+  overflow-y: hidden; 
+  overflow-x: hidden;
+}
+
+.dashboard-content{
+
+  position: relative;
+  left: clamp(1vw,2vw,4vw);
+  min-width: 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  height: 95vh;
+  padding-bottom: 7vh;
+  overflow-y: hidden; 
+  overflow-x: hidden;
+}
+
+
+.airdrop-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-width: 80vw;
+}
+
+.airdrop-header{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1.1rem, 3vw + 1rem, 3rem);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  line-height: 100%;
+}
+
+
+.airdrop-subheader-section{
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  width: 100%;
+  white-space: normal;
+  overflow: visible;
+}
+
+.airdrop-subheader{
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 2rem);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  line-height: 100%;
+  text-overflow: clip;
+  overflow-wrap: break-word; 
+
+}
+
+.airdrop-title-icon {
+  width: 1em;
+  aspect-ratio: 1;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1.25rem, 1vw, 4em);
+}
+
+.airdrop-bar{
+  gap: 0.5em;
+  width: 80vw;
+  height: fit-content;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  margin: 0.5em 0 clamp(0.3em,2vw,3em) 0 ;
+  min-height: 10vh;
+  max-height: 18vh;
+}
+
+
+.topfive-legend-section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:0em;
+  width: 100%;
+}
+
+.topfive-legend-title {
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.75rem, 1vw, 2vw);
+  letter-spacing: 1px;
+}
+
+.address-btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.airdrop-data-legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:0.3em;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+
+
+
+.airdrop-data-legend p{
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.network-legend-text {
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: clamp(0.6rem, 0.7vw, 2vw);
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+.dashboard-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em 0;
+  gap: 1em;
+  min-height:8vh;
+}
+
+.dashboard-header-section-pool{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  gap: 0.5em;
+  padding: 0.5em 0em 0.5em 0;
+  width: auto; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
+  height: auto;
+}
+
+.dashboard-header-section-rewards{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  gap: 0.5em;
+  padding: 0.5em 0em 0.5em 0em;
+  width: auto; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
+  height: auto;
+}
+
+
+.dashboard-header-title {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.65rem, 1vw, 2em);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.dashboard-header-subtitle {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: clamp(2.5rem, 6vw, 25rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  line-height: 100%;
+  margin-top: 0.1em; 
+}
+
+.dashboard-header-divider{
+  width: 100%;
+  border-bottom: 1px white solid ;
+}
+
+.teams-table {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
+  margin-top: clamp(0.9em, 0.5vw,2em);
+  
+}
+
+.teams-header{
+  display: grid; 
+  grid-template-columns: repeat(3, 33%);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.teams-header-name{
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.8rem, 1vw, 3rem);
+}
+
+.teams-header-amount{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  
+}
+
+.teams-header-reward{
+  text-transform: uppercase;
+  text-align: end;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  padding-right: 0.5em;
+}
+
+.teams-list {
+  overflow-y: auto;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.teams-list::-webkit-scrollbar {
+  width: 0.5em;
+  transition: all 0.3s ease;
+  background: transparent; 
+}
+
+.teams-list::-webkit-scrollbar-thumb {
+
+  background-color: transparent; 
+}
+
+.teams-list:hover::-webkit-scrollbar-thumb,
+.teams-list:active::-webkit-scrollbar-thumb {
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+.teams-row{
+  display: grid; 
+  grid-template-columns: repeat(3, 33%);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em 0;
+  
+}
+
+.teams-row:not(:last-child){
+  margin-bottom: 0.25em;
+}
+
+.teams-row-name{
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: clamp(1rem, 1vw, 3rem);
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+
+.teams-row-amount{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: clamp(1rem, 1vw, 3rem);
+}
+
+.teams-row-reward{
+  text-transform: uppercase;
+  text-align: end;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: clamp(1rem, 1vw, 3rem);
+}
+
+
+.no-data {
+  width:100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.no-data p {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: 1rem;
+  text-shadow: none;
+}
+
+
+.reward-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem; 
+  transform: translateY(-13%);
+}
+
+
+.reward-sign {
+  font-size: clamp(1rem, 1.5vw, 2vw);
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 0.5em;
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .dashboard-header-title {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(0.75rem, 1.25vw + 0.25rem, 2em);
+  }
+
+  .reward-text {
+    transform: translateY(-18%);
+  }
+
+  .reward-sign {
+    font-size: clamp(0.75rem, 2vw + 0.25rem, 2em);
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 0.5em;
+  }
+  .airdrop-header{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: clamp(1.1rem, 3vw + 1.5rem, 3rem);
+  }
+
+  .dashboard-content{
+
+    gap: 0.5em;
+  }
+
+  .dashboard-header {
+    margin: 1em 0;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  
+  .airdrop-header{
+    font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  }
+
+  .dashboard-header {
+    margin: 1em 0;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+
+  .dashboard-header {
+    margin: 3em 0;
+  }
+
+  .airdrop-header{
+    font-size: clamp(3rem, 3.5vw + 1rem, 10em);
+  } 
+}
+
+

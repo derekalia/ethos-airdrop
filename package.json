@@ -1,0 +1,39 @@
+{
+  "name": "website_mint",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "lint": "biome check .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.8",
+    "@crossmint/client-sdk-react-ui": "^1.7.0",
+    "@daimo/pay": "^0.3.2",
+    "@tanstack/react-query": "^5.0.5",
+    "connectkit": "^1.8.2",
+    "ethers": "^6.13.1",
+    "graphql": "^16.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.2",
+    "react-spinners": "^0.14.1",
+    "styled-components": "^6.1.13",
+    "viem": "^2.10.9",
+    "wagmi": "^2.12.19"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.1.2",
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.8",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@wagmi/cli": "latest",
+    "buffer": "^6.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  }
+}

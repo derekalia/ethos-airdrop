@@ -1,0 +1,57 @@
+.table-container {
+    border: 2px solid #ff5757;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 40px;
+    display: inline-block;
+  }
+  
+  .affiliate-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .affiliate-table th,
+  .affiliate-table td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .affiliate-table th {
+    background-color: #000;
+  }
+  
+  .affiliate-table td {
+    border-bottom: 1px solid #000;
+  }
+  
+  .affiliate-table tr:nth-child(even) {
+    background-color: #000;
+  }
+  
+  .affiliate-table tr:hover {
+    background-color: #000;
+  }
+  
+  .affiliate-table th,
+  .affiliate-table td {
+    border: none;
+  }
+  
+  .affiliate-table th {
+    font-weight: bold;
+  }
+  
+  .affiliate-table tr {
+    border-top: 1px solid #ff5757;
+  }
+  
+  .affiliate-table tr:first-child {
+    border-top: none;
+  }
+  
+  .affiliate-table td:nth-child(1),
+  .affiliate-table td:nth-child(3) {
+    text-align: right;
+  }
+  

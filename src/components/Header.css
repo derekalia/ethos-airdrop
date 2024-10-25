@@ -1,0 +1,43 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers both the logo and the button */
+    width: 85%;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Aligns the links vertically */
+    justify-content: end;
+}
+
+.logo {
+    margin-top: 0;
+}
+
+ul.nav-links > li {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-container {
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    ul.nav-links > li:not(:first-child) {
+        margin-left: 1em;
+    }
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-container {
+        align-items: center; /* Ensure alignment remains centered */
+    }
+}
